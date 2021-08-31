@@ -5,14 +5,13 @@ import 'react-toastify/dist/ReactToastify.css';
 // import React from 'react'
 
 function alertMyToast(props) {
-    // console.log(props)
     switch (props.msgType) {
 
         case 'success':
 
             toast.success(props.msg, {
                 position: "top-right",
-                autoClose: 2500,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: false,
@@ -24,7 +23,7 @@ function alertMyToast(props) {
 
             toast.info(props.msg, {
                 position: "top-right",
-                autoClose: 2500,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: false,
@@ -36,7 +35,7 @@ function alertMyToast(props) {
 
             toast.warn(props.msg, {
                 position: "top-right",
-                autoClose: 2500,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: false,
@@ -48,7 +47,7 @@ function alertMyToast(props) {
 
             toast.error(props.msg, {
                 position: "top-right",
-                autoClose: 2500,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: false,
@@ -60,7 +59,7 @@ function alertMyToast(props) {
 
             toast(props.msg, {
                 position: "top-right",
-                autoClose: 2500,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: false,

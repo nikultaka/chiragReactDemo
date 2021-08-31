@@ -8,6 +8,8 @@ import Operation from "./Operation";
 import ApiData from "./ApiData";
 import LoveCalc from "./LoveCalc";
 import VideoMp3 from "./VideoMp3";
+import HomePage from "./HomePage";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,7 +23,7 @@ import {
 function Navigation(props) {
   const [modalShow, setModalShow] = React.useState(false);
 
-  // const navstyle = { marginLeft: '1350px' };
+
 
   return (
     <>
@@ -35,7 +37,7 @@ function Navigation(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <Link className="nav-link" to="/">Home</Link>
+                <Link className="nav-link" to="/home">Home</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/operation">Operation</Link>
@@ -72,14 +74,17 @@ function Navigation(props) {
           <Route path="/apidata">
             <ApiData />
           </Route>
-          <Route path="/love">
-            <LoveCalc />
+          <Route path="/home">
+          <HomePage/>
           </Route>
           <Route path="/love">
             <LoveCalc />
           </Route>
           <Route path="/Download">
             <VideoMp3 />
+          </Route>
+          <Route path="/">
+          <HomePage/>
           </Route>
 
         </Switch>

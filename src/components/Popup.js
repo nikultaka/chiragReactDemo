@@ -5,6 +5,13 @@ import RegForm from "./RegForm";
 // require("react-bootstrap/ModalHeader");
 
 function MyVerticallyCenteredModal(props) {
+    const btnstyle = {
+        // marginLeft: '250px'
+        float:'right',
+        backgroundColor: 'white',
+        color : 'black',
+        border : 'none'
+    };
     return (
         <Modal
             {...props}
@@ -13,9 +20,13 @@ function MyVerticallyCenteredModal(props) {
             centered
         >
             <Modal.Header >
+
                 <Modal.Title>
                     Add Person
+
                 </Modal.Title>
+            <Button onClick={props.onHide} style={btnstyle}>X</Button>
+
             </Modal.Header>
             <Modal.Body>
                 {/* form  */}
