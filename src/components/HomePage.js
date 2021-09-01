@@ -1,9 +1,13 @@
 import React, { Component, useEffect,useState } from 'react'
-// import { Text, View } from 'react-native'
-
+import { useSelector, useDispatch } from 'react-redux';
+import { increment } from '../actions/counteraction';
+import { decrement } from '../actions/counteraction';
 
 function HomePage() {
-    // const [isCancelled, setCancelled] = useState(false);
+    
+    const counter = useSelector(state => state.counter);
+    const dispatch = useDispatch()
+    
     const navstyle = {
         marginTop: '300px',
         marginLeft: '250px'
@@ -41,7 +45,9 @@ function HomePage() {
             <div className="container" >
                 <div className="jumbotron" style={navstyle}>
                     <h1 className="myH1" id="myH1" style={fontstyle}>WELCOME</h1>
-                    <p style={ptagtyle}>Experiance New World !</p>
+                    <button onClick= {()=>dispatch(increment())}>Increment</button>
+                    <button onClick= {()=>dispatch(decrement())}>Decrement</button>
+                    <p style={ptagtyle}>Experiance New World ! counter : {counter}</p>
                 </div>
             </div>
         </>

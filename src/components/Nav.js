@@ -9,6 +9,7 @@ import ApiData from "./ApiData";
 import LoveCalc from "./LoveCalc";
 import VideoMp3 from "./VideoMp3";
 import HomePage from "./HomePage";
+import TestPage from "./TestPage";
 
 import {
   BrowserRouter as Router,
@@ -16,6 +17,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+
 
 
 
@@ -51,6 +53,9 @@ function Navigation(props) {
               <li className="nav-item">
                 <Link className="nav-link" to="/Download">VideoMp3</Link>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/test">Test</Link>
+              </li>
 
               <button className="btn btn-primary " onClick={() => setModalShow(true)}>
                 Add
@@ -82,6 +87,9 @@ function Navigation(props) {
           </Route>
           <Route path="/Download">
             <VideoMp3 />
+          </Route>
+          <Route path="/test">
+            <TestPage />
           </Route>
           <Route path="/">
           <HomePage/>

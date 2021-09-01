@@ -2,14 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-// import Navigation from './components/Nav';
+// import Navigation from './components/Nav'; 
+import allReducers from './reducers';
+import {createStore} from 'redux'
+import { Provider } from 'react-redux'
 
 import reportWebVitals from './reportWebVitals';
 
+const store = createStore(allReducers,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
