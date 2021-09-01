@@ -35,7 +35,10 @@ function Operation() {
     const CopyText = () => {
         if (text !== "") {
             if (navigator.clipboard.writeText(text)) {
-                alertMyToast({ msg: 'Copied to Clipboard', msgType: 'success' });
+                // alertMyToast({ msg: 'Text Copied to Clipboard', msgType: 'info' });
+                alertMyToast({ msg: 'Copied ! Use Ctrl +  V to past it.', msgType: 'info' });
+
+                
             }
         } else {
             alertMyToast({ msg: 'Please enter a text', msgType: 'warn' });
@@ -58,7 +61,7 @@ function Operation() {
 
                 </div>
                 <div className="alert alert-primary  mt-3" role="alert">
-                    you write <span className="badge badge-light text-dark">{text.length}</span>text and<span className="badge badge-success text-dark">{text.length > 0 ? (text.split(" ").length) - 1 : 0}</span> words.
+                    you write <span className="badge badge-light text-dark">{text.length}</span>text and<span className="badge badge-success text-dark">{text.split(" ").filter((element)=>{return element.length !== 0}).length}</span> words.
                 </div>
             </div>
 

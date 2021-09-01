@@ -23,7 +23,7 @@ function HomePage() {
         const interval = setInterval(function () {
             // console.log("call every at 1 second");
             var myh1 = document.getElementById("myH1");
-                if (myh1 != 'null' && myh1 != undefined && myh1 != 'undefined' && myh1.style.color == "darkorange") {
+                if (myh1 !== 'null' && myh1 !== undefined && myh1 !== 'undefined' && myh1.style.color == "darkorange") {
                 myh1.style.color = "darkblue";
             } else {
                 myh1.style.color = "darkorange";
@@ -38,7 +38,7 @@ function HomePage() {
 
     return (
         <>
-            <div class="container" >
+            <div className="container" >
                 <div className="jumbotron" style={navstyle}>
                     <h1 className="myH1" id="myH1" style={fontstyle}>WELCOME</h1>
                     <p style={ptagtyle}>Experiance New World !</p>
